@@ -5,6 +5,10 @@ Critter Chronologer a Software as a Service application that provides a scheduli
 
 ## Getting Started
 
+
+### Setup DB (postgres)
+$ docker run --name 'dev-postgres' -e POSTGRES_PASSWORD=nanodegree  -e POSTGRES_USER=udacity -e POSTGRES_DB=critter  -p 5432:5432  postgres
+
 ### Dependencies
 
 * [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download) (or Ultimate) recommended
