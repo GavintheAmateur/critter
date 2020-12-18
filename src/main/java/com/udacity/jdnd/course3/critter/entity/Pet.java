@@ -2,12 +2,15 @@ package com.udacity.jdnd.course3.critter.entity;
 
 import java.time.LocalDate;
 
-import PetType;
 import lombok.Data;
 
-@Data
-public class Pet {
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Data
+@Entity
+public class Pet {
+    @Id
     private long id;
     private PetType type;
     private String name;
@@ -15,3 +18,5 @@ public class Pet {
     private LocalDate birthDate;
     private String notes;
 }
+
+
