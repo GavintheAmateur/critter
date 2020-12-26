@@ -1,11 +1,10 @@
 package com.udacity.jdnd.course3.critter.entity;
 
 import lombok.Data;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
@@ -14,10 +13,11 @@ import java.util.Set;
 @Entity
 public class Schedule {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @OneToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Employee> employees;
-    @OneToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Pet> pets;
     private LocalDate date;
     @ElementCollection

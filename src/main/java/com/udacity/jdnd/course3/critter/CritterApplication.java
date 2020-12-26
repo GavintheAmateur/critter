@@ -11,9 +11,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * Launches the Spring application. Unmodified from starter code.
  */
 @SpringBootApplication
-@EnableJpaRepositories("com.udacity.jdnd.course3.critter.repository")
-@EnableTransactionManagement
-@EnableJpaAuditing
 public class CritterApplication {
 
 	public static void main(String[] args) {
