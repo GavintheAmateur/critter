@@ -3,11 +3,26 @@
 Critter Chronologer a Software as a Service application that provides a scheduling interface for a small business that takes care of animals. This Spring Boot project will allow users to create pets, owners, and employees, and then schedule events for employees to provide services for pets.
 
 
-## Getting Started
+## Built With
 
+* [Spring Boot](https://spring.io/projects/spring-boot) - Framework providing dependency injection, web framework, data binding, resource management, transaction management, and more.
+* [Google Guava](https://github.com/google/guava) - A set of core libraries used in this project for their collections utilities.
+* [H2 Database Engine](https://www.h2database.com/html/main.html) - An in-memory database used in this project to run unit tests.
+* [Postgres](https://hub.docker.com/_/postgres) - Postgres database
+* [MapStruct](https://mapstruct.org/documentation) -For mapping bettween entity and DTO. 
+* [Lomok](https://projectlombok.org/) -For simplying defining entities.
 
+## Run
 ### Setup DB (postgres)
 $ docker run --name 'dev-postgres' -e POSTGRES_PASSWORD=nanodegree  -e POSTGRES_USER=udacity -e POSTGRES_DB=critter  -p 5432:5432  postgres
+### Maven build
+$ mvn install
+### Run Application
+- Please run with java 11
+- $ java -jar  target/critter-0.0.1-SNAPSHOT.jar
+
+
+## Course Instructions  
 
 ### Dependencies
 
@@ -72,12 +87,6 @@ In addition to the included unit tests, a Postman collection has been provided.
 
 Each entry in this collection contains information in its `Body` tab if necessary and all requests should function for a completed project. Depending on your key generation strategy, you may need to edit the specific ids in these requests for your particular project.
 
-## Built With
-
-* [Spring Boot](https://spring.io/projects/spring-boot) - Framework providing dependency injection, web framework, data binding, resource management, transaction management, and more.
-* [Google Guava](https://github.com/google/guava) - A set of core libraries used in this project for their collections utilities.
-* [H2 Database Engine](https://www.h2database.com/html/main.html) - An in-memory database used in this project to run unit tests.
-* [MySQL Connector/J](https://www.mysql.com/products/connector/) - JDBC Drivers to allow Java to connect to MySQL Server
 
 ## License
 
